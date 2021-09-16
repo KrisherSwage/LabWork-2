@@ -215,7 +215,8 @@ namespace Lab2__PP_
 
                     switch ((numb / 10) % 10) // количество десятков
                     {
-                        case 0:
+                        case 1:
+                            Console.Write("десять ");
                             break;
                         case 2:
                             Console.Write("двадцать ");
@@ -280,7 +281,8 @@ namespace Lab2__PP_
                 {
                     switch ((numb / 10) % 10) // количество десятков
                     {
-                        case 0:
+                        case 1:
+                            Console.Write("Десять ");
                             break;
                         case 2:
                             Console.Write("Двадцать ");
