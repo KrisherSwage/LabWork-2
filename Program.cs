@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+//namespace Lab2__PP_
+using System;
 
 namespace Lab2__PP_
 {
@@ -8,10 +10,10 @@ namespace Lab2__PP_
         {
             Console.WriteLine("Hello World!");
 
-            int numb = 0;
+            int numb = 0; // основная переменная
 
-            
-            while (true)
+
+            while (true) // цикл проверки на ввод
             {
                 Console.WriteLine("Введите целое число от 1 до 9999");
                 if (int.TryParse(Console.ReadLine(), out int x))
@@ -21,6 +23,7 @@ namespace Lab2__PP_
                         numb = x;
                         break;
                     }
+                    Console.WriteLine("Введено некорректное значение!");
                 }
             }
 
@@ -54,7 +57,8 @@ namespace Lab2__PP_
                     Console.Write("Девять тысяч ");
                     break;
             }
-            if (numb / 1000 != 0)
+
+            if (numb / 1000 != 0) // если тысяч 0, то заглавная буква
             {
                 switch ((numb / 100) % 10) // количество сотен
                 {
@@ -87,7 +91,7 @@ namespace Lab2__PP_
                         break;
                 }
             }
-            else
+            else 
             {
                 switch ((numb / 100) % 10) // количество сотен
                 {
@@ -122,7 +126,7 @@ namespace Lab2__PP_
             }
             if ((numb % 100) > 10 && (numb % 100) < 20) // определение с десятками
             {
-                if (numb / 100 != 0)
+                if (numb / 100 != 0) // если тысяч и сотен 0, то заглавная буква
                 {
                     switch (numb % 100)
                     {
@@ -210,7 +214,7 @@ namespace Lab2__PP_
             }
             else
             {
-                if (numb / 100 != 0)
+                if (numb / 100 != 0) // если тысяч и сотен 0, то заглавная буква
                 {
 
                     switch ((numb / 10) % 10) // количество десятков
@@ -310,7 +314,7 @@ namespace Lab2__PP_
                             break;
                     }
 
-                    if (numb / 10 != 0)
+                    if (numb / 10 != 0) // если тысяч, сотен и десятков 0, то заглавная буква
                     {
 
                         switch (numb % 10) // количество единиц
@@ -383,7 +387,7 @@ namespace Lab2__PP_
                     }
                 }
 
-                switch (numb % 10)
+                switch (numb % 10) // определение окончания слова "Рубль"
                 {
                     case 0:
                         Console.Write("рублей ");
@@ -417,7 +421,7 @@ namespace Lab2__PP_
                         break;
                 }
             }
-            
+
             Console.ReadLine();
         }
     }
